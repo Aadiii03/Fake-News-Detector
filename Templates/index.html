@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="hero">
+    <h1>Instant Fake News Analysis</h1>
+    <p>Get AI-powered truth verification based on credible datasets & research models.</p>
+
+    <form action="/" method="POST" class="predict-form">
+        <textarea name="news" placeholder="Paste news/article/title here..." required></textarea>
+        <button type="submit">Analyze Now</button>
+    </form>
+</section>
+
+{% endblock %}

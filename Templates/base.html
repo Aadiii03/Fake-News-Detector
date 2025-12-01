@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title if title else "Fake News Detector" }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="body-root">
+<div class="app-shell">
+
+    <!-- Left sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="logo-circle">FD</div>
+            <div>
+                <div class="brand-name">Fake News Detector</div>
+                <div class="brand-owner">by Adil Sheikh</div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="{{ url_for('home') }}" class="sidebar-link">🏠 Dashboard</a>
+
+            <a href="{{ url_for('detector') }}" class="sidebar-link">🧪 Detector</a>
+            <a href="{{ url_for('methodology') }}" class="sidebar-link">📐 Methodology</a>
+            <a href="{{ url_for('resources') }}" class="sidebar-link">📚 Resources</a>
+            <a href="{{ url_for('about') }}" class="sidebar-link">👥 About</a>
+            <a href="{{ url_for('faq') }}" class="sidebar-link">❓ FAQ</a>
+            <a href="{{ url_for('contact') }}" class="sidebar-link">✉️ Contact</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="badge-academic">College Major Project</span>
+        </div>
+    </aside>
+
+    <!-- Right main area -->
+    <div class="main-area">
+
+        <!-- Top nav bar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <span class="top-title">Fake News Detector</span>
+                <span class="top-subtitle">Hybrid Classification · Credibility Insights</span>
+            </div>
+            <div class="topbar-right">
+                <span class="pill pill-soft">Academic Prototype</span>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="page-content">
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <span>© 2025 Fake News Detector. Academic demo only.</span>
+            <span class="footer-muted">Designed & implemented by <span class="owner-muted">Adil Sheikh</span>.</span>
+        </footer>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero-card">
+    <div class="hero-text">
+        <h1>Verify information before you share.</h1>
+        <p>Fake News Detector uses hybrid machine-learning models to estimate whether a news text is likely fake or real, and shows you where to cross-check it.</p>
+
+        <div class="hero-actions">
+            <a href="{{ url_for('detector') }}" class="btn btn-primary">Open Detector</a>
+            <a href="{{ url_for('methodology') }}" class="btn btn-outline">View Methodology</a>
+        </div>
+
+        <div class="hero-metrics">
+            <div class="metric">
+                <div class="metric-label">Dataset accuracy</div>
+                <div class="metric-value">≈96%</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Hybrid models</div>
+                <div class="metric-value">2</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Verification sources</div>
+                <div class="metric-value">6+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.pexels.com/photos/6476584/pexels-photo-6476584.jpeg?auto=compress&cs=tinysrgb&w=800"
+             alt="Person analyzing news on screens">
+    </div>
+</section>
+
+<section class="grid-two">
+    <div class="card">
+        <h2 class="card-title">Quick credibility check</h2>
+        <p class="card-subtitle">Paste a headline or a short article and get an instant prediction.</p>
+        <form action="{{ url_for('detector') }}" method="POST" class="stack-form">
+            <textarea name="news_text" placeholder="Paste news headline or opening paragraphs here..." required></textarea>
+            <button type="submit" class="btn btn-primary full-width">Run Detector</button>
+            <p class="help-text">This is a research prototype. Always verify important claims using the fact-checking links shown with the prediction.</p>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">How the system helps you</h2>
+        <ul class="feature-list">
+            <li><strong>Hybrid classification</strong> – combines Naive Bayes and Logistic Regression outputs.</li>
+            <li><strong>Probability score</strong> – gives a confidence percentage, not just a label.</li>
+            <li><strong>Verification links</strong> – suggests trusted sites where you can confirm the story.</li>
+            <li><strong>Responsive design</strong> – works smoothly on laptop and mobile for quick checks.</li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}

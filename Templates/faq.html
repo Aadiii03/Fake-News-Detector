@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h1>FAQ</h1>
+
+    <div class="faq-item">
+        <h3>Is this tool 100% accurate?</h3>
+        <p>No. It is a research prototype trained on historical data. It provides a probability-based indication, not a final verdict. Always cross-check important news with external fact-checking sites.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What type of news works best?</h3>
+        <p>English news articles and headlines similar in style to the training dataset (online political and general news). Highly informal messages, memes or very short texts may be harder to classify reliably.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Does this detect fake images or videos?</h3>
+        <p>No, the current version only analyses text. Image and video misinformation detection is part of future scope.</p>
+    </div>
+</section>
+{% endblock %}

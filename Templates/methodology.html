@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h1>Methodology</h1>
+    <p class="card-subtitle">Technical overview of the hybrid classification pipeline used in Fake News Detector.</p>
+
+    <div class="grid-two">
+        <div class="sub-card">
+            <h3>1. Data preprocessing</h3>
+            <ul class="bullet-list">
+                <li>Lower-casing, punctuation removal, stop-word filtering.</li>
+                <li>Tokenization and TF-IDF vectorization to represent text numerically.</li>
+            </ul>
+        </div>
+        <div class="sub-card">
+            <h3>2. Hybrid model</h3>
+            <ul class="bullet-list">
+                <li>Trained a Naive Bayes (NB) classifier and a Logistic Regression (LR) classifier.</li>
+                <li>Final probability is the mean of NB and LR outputs, improving stability.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-two">
+        <div class="sub-card">
+            <h3>3. Evaluation</h3>
+            <p>On the held-out test set the ensemble achieved approximately <strong>96% accuracy</strong> with balanced precision and recall for both classes.</p>
+        </div>
+        <div class="sub-card">
+            <h3>4. Limitations</h3>
+            <p>Performance may degrade on new types of misinformation or very recent events. Therefore, users are encouraged to cross-check results on trusted platforms.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

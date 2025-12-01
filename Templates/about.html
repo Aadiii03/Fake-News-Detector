@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h1>About the Project</h1>
+    <p class="card-subtitle">Fake News Detector is a hybrid machine-learning project built as an academic prototype to explore automated misinformation detection.</p>
+
+    <div class="grid-two about-layout">
+        <div>
+            <h3>Project goals</h3>
+            <ul class="bullet-list">
+                <li>Assist users in quickly estimating whether a piece of news is likely fake or real.</li>
+                <li>Demonstrate hybrid classification (Naive Bayes + Logistic Regression) on real datasets.</li>
+                <li>Encourage responsible sharing by linking to external fact-checking platforms.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Owner & Team</h3>
+            <p>This prototype has been designed and implemented by <span class="owner-muted-strong">Adil Sheikh</span> as a college major project under the team name <strong>Impact Makers</strong>.</p>
+            <p class="muted">The system is intended strictly for educational and research purposes, not as a replacement for professional journalism.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
